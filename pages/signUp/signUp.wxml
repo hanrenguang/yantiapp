@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="logo-box">
+  <image class="logo" src="../../assets/imgs/index/logo.png"></image>
+</view>
+<view class="info-box">
+  <view class="phone-info-box">
+    <view class="phone-box">
+      <text class="item">+86</text>
+      <input type="number"
+        class="{{phoneErr ? 'phone-number err' : 'phone-number'}}"
+        placeholder="请填写手机号码"
+        value="{{phoneNumber}}"
+        bindblur="phoneBlur"
+        bindfocus="phoneFocus"/>
+      <!--<button class="send-check-code">发送验证码</button>-->
+    </view>
+    <!--<view class="check-code-box">
+      <text class="item">验证码</text>
+      <input type="number" class="check-code" placeholder="请输入验证码" />
+    </view>-->
+  </view>
+
+  <view class="user-info-box">
+    <view class="name-box">
+      <text class="item">姓名</text>
+      <input type="text"
+        class="{{nameErr ? 'name err' : 'name'}}"
+        placeholder="请输入完整姓名"
+        value="{{nameInfo}}"
+        bindblur="nameBlur"
+        bindfocus="nameFocus"/>
+    </view>
+    <view class="qq-box">
+      <text class="item">QQ</text>
+      <input type="number"
+        class="{{qqErr ? 'qq err' : 'qq'}}"
+        placeholder="请输入QQ号"
+        value="{{qqNumber}}"
+        bindblur="qqBlur"
+        bindfocus="qqFocus"/>
+    </view>
+    <navigator url="../selectSchool/selectSchool" open-type="navigate" class="school-box">
+      <view class="item">学校</view>
+      <input type="text" disabled="{{true}}" class="school" value="{{schoolInfo}}" />
+      <view class="select">
+        选择
+        <view class="select-icon"></view>
+      </view>
+    </navigator>
+    <navigator url="../selectAcademy/selectAcademy" open-type="navigate" class="academy-box" wx:if="{{!!schoolInfo}}">
+      <view class="item">学院</view>
+      <input type="text" disabled="{{true}}" class="academy" value="{{academyInfo}}" />
+      <view class="select">
+        选择
+        <view class="select-icon"></view>
+      </view>
+    </navigator>
+    <navigator url="../selectGrade/selectGrade" open-type="navigate" class="grade-box">
+      <view class="item">年级</view>
+      <input type="text" disabled="{{true}}" class="grade" value="{{gradeInfo}}" />
+      <view class="select">
+        选择
+        <view class="select-icon"></view>
+      </view>
+    </navigator>
+    <view class="klass-box">
+      <text class="item">班级</text>
+      <input type="text"
+        class="{{klassErr ? 'klass err' : 'klass'}}"
+        placeholder="请输入班级"
+        value="{{klass}}"
+        bindblur="klassBlur"
+        bindfocus="klassFocus"/>
+    </view>
+  </view>
+
+  <view class="student-id-card-box">
+    <text class="item">学生证上传（限一张）</text>
+    <view class="select-id-card" hover-class="active-select" bindtap="chooseImg">+</view>
+  </view>
+
+  <view class="next-box">
+    <button class="next"
+      hover-class="test-tap"
+      bindtap="submitTap"
+      disabled="{{!canTap}}">
+      提交
+    </button>
+  </view>
+</view>
+
+<view class="show-msg-box"
+  wx:if="{{isShow}}">
+  <view class="msg">{{msg}}</view>
+</view>

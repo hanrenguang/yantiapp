@@ -1,0 +1,28 @@
+<view class="search-box">
+  <input type="text"
+  class="{{searchClass}}"
+  placeholder="搜索"
+  value="{{subject}}"
+  bindinput="onInput"
+  bindfocus="onFocus"
+  bindblur="onBlur"
+    bindconfirm="searchSubject"/>
+</view>
+<text class="show-text">全部</text>
+<view class="prompt"
+  wx:if="{{showMsg}}">
+  未查询到科目信息
+</view>
+<view class="subject-list"
+  bindtap="tapSubject"
+  wx:if="{{subjectList.length}}">
+  <view class="subject-item"
+    hover-class="select-subject"
+    wx:for="{{subjectList}}"
+    data-subject="{{item}}">
+    {{item}}
+  </view>
+</view>
+<view class="show-msg-box" wx:if="{{isShow}}">
+  <view class="msg">{{msg}}</view>
+</view>

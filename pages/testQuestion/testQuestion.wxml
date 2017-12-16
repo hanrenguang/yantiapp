@@ -1,0 +1,131 @@
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="container">
+  <view class="nav-box">
+    <view class="pre-question"
+      hover-class="change-question-hover"
+      bindtap="goPreQ">
+      <view class="pre-icon"></view>
+      上一题
+    </view>
+    <view class="next-question"
+      hover-class="change-question-hover"
+      bindtap="goNextQ">
+      下一题
+      <view class="next-icon"></view>
+    </view>
+  </view>
+
+  <view class="question-box">
+    <view class="info-bar">
+      <view class="left-box">{{school}} | {{subject}} | {{combinationName}}</view>
+      <view class="right-box">作者: {{author}}</view>
+    </view>
+
+    <view class="question-body-box">
+      <!--<view class="body">{{questionBody}}</view>-->
+      <view class="body">
+        <template is="wxParse" data="{{wxParseData: questionBody.nodes}}"/>
+      </view>
+      <view class="selection-box" wx:if="{{hasSelection}}">
+        <view class="selection-a">
+          {{selectionA}}
+        </view>
+        <view class="selection-b">
+          {{selectionB}}
+        </view>
+        <view class="selection-c">
+          {{selectionC}}
+        </view>
+        <view class="selection-d">
+          {{selectionD}}
+        </view>
+      </view>
+      <view class="body-img-list"
+        wx:if="{{bodyImgList.length}}"
+        bindtap="previewBodyImg">
+        <image wx:for="{{bodyImgList}}"
+          data-url="{{item}}"
+          src="{{item}}" ></image>
+      </view>
+    </view>
+    <view class="show-answer"
+      wx:if="{{!showAnswer}}"
+      bindtap="showAsw">
+      显示答案
+      <view class="show-icon"></view>
+    </view>
+    <view class="hide-answer"
+      wx:if="{{showAnswer}}"
+      bindtap="hideAsw">
+      收起
+      <view class="hide-icon"></view>
+    </view>
+    <view class="answer-wrapper" wx:if="{{showAnswer}}">
+      <view class="answer-box">
+        <view class="my-title-box">
+          <view class="my-title">答案</view>
+        </view>
+        <view class="answer">
+          <template is="wxParse" data="{{wxParseData: answer.nodes}}"/>
+        </view>
+        <view class="answer-img-list"
+          wx:if="{{answerImgList.length}}"
+          bindtap="previewAnswerImg">
+          <image wx:for="{{answerImgList}}"
+            data-url="{{item}}"
+            src="{{item}}" ></image>
+        </view>
+      </view>
+      <view class="analysis-box">
+        <view class="my-title-box">
+          <view class="my-title">详解</view>
+        </view>
+        <view class="analysis">
+          <template is="wxParse" data="{{wxParseData: analysis.nodes}}"/>
+        </view>
+        <view class="analysis-img-list"
+          wx:if="{{analysisImgList.length}}"
+          bindtap="previewAnalysisImg">
+          <image wx:for="{{analysisImgList}}"
+            data-url="{{item}}"
+            src="{{item}}" ></image>
+        </view>
+      </view>
+      <view class="points-box">
+        <view class="my-title-box">
+          <view class="my-title">知识点</view>
+        </view>
+        <view class="points">{{points}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="judge-box">
+    <button class="{{unTapR ? 'right' : 'right-tap'}}"
+      bindtap="rightTap"
+      disabled="{{!canTapR}}">
+      正确
+    </button>
+    <button class="{{unTapC ? 'uncertain' : 'uncertain-tap'}}"
+      bindtap="uncertainTap"
+      disabled="{{!canTapU}}">
+      不确定
+    </button>
+    <button class="{{unTapE ? 'err' : 'err-tap'}}"
+      bindtap="errTap"
+      disabled="{{!canTapE}}">
+      错误
+    </button>
+  </view>
+</view>
+
+<view class="show-msg-box" wx:if="{{isShow}}">
+  <view class="msg">{{msg}}</view>
+</view>
+
+<view class="show-kfformula" wx:if="{{isTapKfformula}}" bindtap="hideKfformula">
+  <view class="kfformula-wrapper">
+    <image src="{{kfformulaSrc}}" mode="aspectFit" style="width: 100%;"></image>
+  </view>
+</view>

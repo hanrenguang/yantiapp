@@ -1,0 +1,14 @@
+<text class="show-text">全部</text>
+<view class="academy-list"
+  bindtap="tapAcademy"
+  wx:if="{{academyList.length}}">
+  <view class="academy-item"
+    hover-class="select-academy"
+    wx:for="{{academyList}}"
+    data-academy="{{item}}">
+    {{item}}
+  </view>
+</view>
+<view class="show-msg-box" wx:if="{{isShow}}">
+  <view class="msg">{{msg}}</view>
+</view>

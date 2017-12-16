@@ -1,0 +1,11 @@
+<text class="show-text">全部</text>
+<view class="grade-list"
+  bindtap="tapGrade"
+  wx:if="{{gradeList.length}}">
+  <view class="grade-item"
+    hover-class="select-grade"
+    wx:for="{{gradeList}}"
+    data-grade="{{item}}">
+    {{item}}
+  </view>
+</view>

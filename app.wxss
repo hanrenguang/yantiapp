@@ -1,0 +1,12 @@
+/**app.wxss**/
+page {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fbf9fe;
+}
+
+/* hover-class */
+.test-tap {
+  background-color: #eee;
+  opacity: 0.6;
+}

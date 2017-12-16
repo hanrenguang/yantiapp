@@ -1,0 +1,189 @@
+/**index.wxss**/
+/* logo */
+.logo-box {
+  margin: 100rpx;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+/* info-box */
+.phone-info-box view,
+.user-info-box view,
+.user-info-box navigator,
+.phone-info-box input,
+.user-info-box input {
+  line-height: 96rpx;
+  font-size: 35rpx;
+}
+.phone-info-box input,
+.user-info-box input {
+  height: 96rpx;
+  padding-left: 10rpx;
+}
+.phone-info-box,
+.user-info-box {
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+
+/* phone-info-box */
+.phone-info-box {
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 10rpx;
+}
+.phone-box {
+  border-bottom: 1rpx solid #eee;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.phone-info-box .item {
+  width: 18%;
+}
+.phone-number {
+  border-left: 1rpx solid #eee;
+}
+/*button.send-check-code {
+  height: 65rpx;
+  line-height: 65rpx;
+  padding: 0 10rpx;
+  font-size: 32rpx;
+  background-color: #1aac19;
+  color: #fff;
+}
+.check-code-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}*/
+
+/* user-info-box */
+.user-info-box {
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 10rpx;
+}
+.user-info-box .item {
+  width: 25%;
+}
+.name-box,
+.qq-box,
+.klass-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+.name-box,
+.qq-box,
+.school-box,
+.academy-box,
+.grade-box {
+  border-bottom: 1rpx solid #eee;
+}
+
+/* school & grade */
+.school-box,
+.academy-box,
+.grade-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+.school,
+.academy,
+.grade {
+  min-width: 52%;
+}
+.select {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  padding-right: 20rpx;
+  color: #999;
+}
+.select-icon {
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #999;
+  border-right: 4rpx solid #999;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* student-id-card-box */
+.student-id-card-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  padding-left: 15rpx;
+  line-height: 120rpx;
+  font-size: 35rpx;
+  background-color: #fff;
+}
+.select-id-card {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 30rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border: 4.5rpx dotted #eee;
+  color: #bbb;
+  font-size: 60rpx;
+}
+.active-select {
+  background-color: #eee;
+}
+
+/* next */
+.next-box {
+  width: 100%;
+  margin: 50rpx 0 130rpx 0;
+}
+button.next {
+  width: 85%;
+  height: 96rpx;
+  line-height: 96rpx;
+  background-color: #09ba07;
+  color: #fff;
+}
+
+/* show-msg-box */
+.show-msg-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+.msg {
+  position: fixed;
+  top: 300rpx;
+  left: 50%;
+  z-index: 999;
+  width: 50%;
+  margin-left: -25%;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  word-break: break-all;
+  font-size: 32rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* err */
+.err {
+  color: red;
+}

@@ -1,0 +1,89 @@
+/* search */
+.search-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #f0eff4;
+}
+.search-default {
+  min-width: 95%;
+  height: 75rpx;
+  border-radius: 40rpx;
+  font-size: 35rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.search-enter {
+  min-width: 95%;
+  height: 75rpx;
+  border-radius: 40rpx;
+  padding-left: 15rpx;
+  font-size: 35rpx;
+  text-align: left;
+  background-color: #fff;
+}
+
+/* show-text */
+.show-text {
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+/* subject-list */
+.prompt {
+  width: 100%;
+  border-top: 1rpx solid #ddd;
+  line-height: 90rpx;
+  text-indent: 10rpx;
+  color: red;
+  background-color: #fff;
+}
+.subject-list {
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #fff;
+}
+.subject-item {
+  margin-left: 15rpx;
+  padding-left: 10rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #ddd;
+}
+.subject-list .subject-item:nth-child(1) {
+  border-width: 0;
+}
+
+/* hover */
+.select-subject {
+  background-color: #eee;
+}
+/* show-msg-box */
+.show-msg-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+.msg {
+  position: fixed;
+  top: 300rpx;
+  left: 50%;
+  z-index: 999;
+  width: 50%;
+  margin-left: -25%;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  word-break: break-all;
+  font-size: 32rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}

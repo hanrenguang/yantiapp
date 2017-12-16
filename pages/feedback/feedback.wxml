@@ -1,0 +1,23 @@
+<text class="title">错误反馈</text>
+<view class="feedback-box">
+  <textarea class="feedback"
+    maxlength="10000"
+    placeholder="请输入信息"
+    bindinput="textareaInput"></textarea>
+</view>
+<text class="img-title">图片（提供图片输入，限一张）</text>
+<view class="img-box">
+  <view class="select-icon"
+    hover-class="select-hover"
+    bindtap="chooseImg">+</view>
+</view>
+<view class="submit-btn-box">
+  <button class="submit-btn"
+    hover-class="test-tap"
+    bindtap="submitTap">
+    提交
+  </button>
+</view>
+<view class="show-msg-box" wx:if="{{isShow}}">
+  <view class="msg">{{msg}}</view>
+</view>

@@ -1,0 +1,28 @@
+<view class="search-box">
+  <input type="text"
+    class="{{searchClass}}"
+    placeholder="搜索"
+    value="{{schoolName}}"
+    bindinput="onInput"
+    bindfocus="onFocus"
+    bindblur="onBlur"
+    bindconfirm="searchSchool"/>
+</view>
+<text class="show-text">全部</text>
+<view class="prompt"
+  wx:if="{{showMsg}}">
+  未查询到学校信息
+</view>
+<view class="school-list"
+  bindtap="tapSchool"
+  wx:if="{{schoolList.length}}">
+  <view class="school-item"
+    hover-class="select-school"
+    wx:for="{{schoolList}}"
+    data-school="{{item}}">
+    {{item}}
+  </view>
+</view>
+<view class="show-msg-box" wx:if="{{isShow}}">
+  <view class="msg">{{msg}}</view>
+</view>

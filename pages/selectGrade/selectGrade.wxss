@@ -1,0 +1,28 @@
+/* show-text */
+.show-text {
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+/* grade-list */
+.grade-list {
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #fff;
+}
+.grade-item {
+  margin-left: 15rpx;
+  padding-left: 10rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #ddd;
+}
+.grade-list .grade-item:nth-child(1) {
+  border-width: 0;
+}
+
+/* hover */
+.select-grade {
+  background-color: #eee;
+}

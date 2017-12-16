@@ -1,0 +1,114 @@
+/* user-avatar-box */
+.user-avatar-box {
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+}
+.bg {
+  width: 100%;
+  height: 400rpx;
+}
+.user-box {
+  width: 100%;
+  position: absolute;
+  top: 70rpx;
+  z-index: 10;
+}
+.avatar-box {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.auth {
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  z-index: 20;
+}
+.phone-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+}
+.name,
+.phone {
+  text-align: center;
+}
+.phone {
+  font-size: 30rpx;
+}
+
+/* user-info-box & test-info-box */
+.user-info-box {
+  padding-left: 10rpx;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #fff;
+}
+.test-info-box {
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #fff;
+}
+.qq-box,
+.school-box,
+.grade-box,
+.test-count-box,
+.right-count-box,
+.err-count-box {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 80rpx;
+}
+.school-box,
+.grade-box,
+.right-count-box,
+.err-count-box {
+  border-top: 1rpx solid #ddd;
+}
+.wrapper {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 43rpx;
+  height: 43rpx;
+  padding-right: 15rpx;
+}
+.qq-number,
+.school,
+.grade,
+.test-count,
+.right-count,
+.err-count {
+  margin-right: 10rpx;
+  color: #bbb;
+}
+
+/* btn */
+.authenticate-box {
+  width: 100%;
+  margin: 50rpx 0 130rpx 0;
+}
+button.authenticate-status {
+  width: 85%;
+  height: 96rpx;
+  line-height: 96rpx;
+  background-color: #09ba07;
+  color: #fff;
+}

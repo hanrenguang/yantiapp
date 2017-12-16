@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/myself/myself",
+    "pages/subject/subject",
+    "pages/selectSubject/selectSubject",
+    "pages/testQuestion/testQuestion",
+    "pages/feedback/feedback",
+    "pages/signUp/signUp",
+    "pages/selectSchool/selectSchool",
+    "pages/selectAcademy/selectAcademy",
+    "pages/selectGrade/selectGrade"
+  ],
+  "window": {
+    "navigationBarTitleText": "云验题",
+    "navigationBarBackgroundColor": "#37383c"
+  }
+}
